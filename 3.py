@@ -50,11 +50,14 @@ class student:
             print("He finish the collage")
             self.alive = True
             self.gladness = +50
+        elif self.balance <= 0:
+            self.alive = False
+
 
     def end_of_day(self):
         print(f'Gladness = {self.gladness}')
         print(f'Progress = {round(self.progress, 2)}')
-        print(f'Balance = {self.balance}')
+        print(f'Balance = {self.balance}$')
         print(f'Workexperience = {self.workexp}')
 
     def live(self, day):
@@ -69,7 +72,6 @@ class student:
             self.to_chill()
         self.end_of_day()
         self.is_alive()
-
 
 sasha = student(name="Sasha")
 for day in range(365):
